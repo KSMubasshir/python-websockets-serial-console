@@ -1,5 +1,7 @@
 # python-websockets-serial-console
 Python Web-based Serial Console using WebSockets
+## Tutorial Link
+http://fabacademy.org/archives/2015/doc/WebSocketConsole.html
 ## Requirements and Architecture
 Before digging into the details let's describe the requirements:
 
