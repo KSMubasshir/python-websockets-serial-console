@@ -11,3 +11,6 @@ Before digging into the details let's describe the requirements:
 So this is our architecture:
 
 ![architecture](images/architecture.png)
+
+## Server Page
+![index](images/index.png)
