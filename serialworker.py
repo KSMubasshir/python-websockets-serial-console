@@ -18,7 +18,7 @@ class SerialProcess(multiprocessing.Process):
         self.sp.close()
 
     def write_serial(self, data):
-        self.sp.write(data)
+        self.sp.write(data.encode())
         # time.sleep(1)
 
     def read_serial(self):
