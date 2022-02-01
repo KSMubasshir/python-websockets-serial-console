@@ -42,7 +42,7 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
         clients.remove(self)
 
 
-# check the queue for pending messages, and rely that to all connected clients
+# check the queue for pending messages, and rely on that to all connected clients
 def check_queue():
     if not output_queue.empty():
         message = output_queue.get()

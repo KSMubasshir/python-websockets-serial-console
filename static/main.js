@@ -23,10 +23,10 @@ $(document).ready(function () {
     };
 
 
-// GUI Stuff
+    // GUI Stuff
 
 
-// send a command to the serial port
+    // send a command to the serial port
     $("#cmd_send").click(function (ev) {
         ev.preventDefault();
         var cmd = $('#cmd_value').val();

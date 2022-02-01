@@ -1,7 +1,7 @@
 import serial
 import multiprocessing
 
-## Change this to match your local settings
+# Change this to match your local settings
 SERIAL_PORT = '/dev/ttyACM0'
 SERIAL_BAUDRATE = 9600
 
@@ -38,7 +38,7 @@ class SerialProcess(multiprocessing.Process):
                 print("writing to serial: " + data)
 
             # look for incoming serial data
-            if (self.sp.inWaiting() > 0):
+            if self.sp.inWaiting() > 0:
                 data = self.read_serial()
                 print("reading from serial: " + data)
                 # send it back to tornado
