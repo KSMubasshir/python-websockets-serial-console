@@ -1,10 +1,9 @@
 import serial
-import time
 import multiprocessing
 
 ## Change this to match your local settings
 SERIAL_PORT = '/dev/ttyACM0'
-SERIAL_BAUDRATE = 115200
+SERIAL_BAUDRATE = 9600
 
 
 class SerialProcess(multiprocessing.Process):

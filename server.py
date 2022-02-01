@@ -4,8 +4,6 @@ import tornado.web
 import tornado.websocket
 import tornado.gen
 from tornado.options import define, options
-import os
-import time
 import multiprocessing
 import serialworker
 import json
@@ -25,7 +23,7 @@ class IndexHandler(tornado.web.RequestHandler):
 
 class StaticFileHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('main.js')
+        self.render('static/main.js')
 
 
 class WebSocketHandler(tornado.websocket.WebSocketHandler):
@@ -72,6 +70,6 @@ if __name__ == '__main__':
     mainLoop = tornado.ioloop.IOLoop.instance()
     # adjust the scheduler_interval according to the frames sent by the serial port
     scheduler_interval = 100
-    scheduler = tornado.ioloop.PeriodicCallback(check_queue, scheduler_interval, io_loop=mainLoop)
+    scheduler = tornado.ioloop.PeriodicCallback(check_queue, scheduler_interval)
     scheduler.start()
     mainLoop.start()
